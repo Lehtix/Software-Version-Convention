@@ -1,34 +1,48 @@
 # Software-Version-Convention v.1.21.096.1
 
+
 An non-enforceable agreement to regulate versioning for the sake of system security
+
 
 software as you know will start to get vulnerable the older it gets because of either new standards in code, exploits were found, or just OS system changes. 
 
+
 the reason for this standard is to help administrators understand how old their software that they're using is, and if it can have any serious impact on the securities of their system;
 
+
 version standard proposal:
+
+
 
 1.21.096.1
 
 ^ first block is your major release version
 
+
+
 1.21.096.1
 ..^ second block is the last 2 digits of the calander year that it was committed/built/released
+
 
 1.21.096.1
 .....^ first two digits of the third block is the month; if <10 than always 0x, if >9 just use 2 digits, 10, 11, 12;
 .......^ the last digit of the third block is the day of that month; always a whole number, never start with a 0;
 
+
 1.21.096.1
 .........^ and of course there can be and will be multiple builds a day, so sub version number is appended here
 
+
 That way we are able to know that this was major release 1, dated september 9th, 2021, and it was the first build or release of that day
+
 
   Q: But that would make it really confusing to implement
   A: In my opinion it would be easier, code can be made to automatically append the version number, the only manual setting you would need is the major release number, all else would be automatic;
   
+	
   Unintended feature: perhaps you want your code to update on a certain date, or you always have to have your code update 30 days prior to the last release; your code would only need to reference the version number to grab the date
   
+	
   TAB DELIMITED SEQUENCE
 1	.	21	.	01	1		.	1		011
 1	.	21	.	01	2		.	1		012
